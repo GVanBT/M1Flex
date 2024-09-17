@@ -1,0 +1,44 @@
+<script>
+    var alive = true
+    let char_name = "Protagonist";
+    var hp = 20
+    var dashes = 2
+    var level = 60
+    let cheats_enabled = false
+
+    console.log("Welcome " + char_name)
+    console.log(char_name + " level: " + level)
+    console.log(char_name + " HP: " + hp)
+    console.log(char_name + " dashes left: " + dashes)
+    console.log("Cheats enabled: " + cheats_enabled)
+
+    level++
+    dashes--
+    hp--
+
+    if ( cheats_enabled == true )
+    {
+       console.log("WARNING: Cheats enabled. Achievements disabled.")
+    }
+
+    if ( level++ )
+    {
+        console.log( char_name +" has reached level " + level)
+    }
+
+    if ( dashes-- )
+    {
+        console.log("You used a dash! " + dashes + " dashes left!")
+    }
+
+    if ( hp-- )
+    {
+        console.log("You took damage. " + hp + " HP left!")
+    }
+
+    if ( hp <= 0 )
+    {
+        console.log("You have died. Press spacebar to respawn.")
+    }
+
+</script>
